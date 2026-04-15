@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Battle Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚔️ AI BATTLE ARENA</h1>
+    <p>審査員：あなた</p>
+  </header>
+
+  <main>
+    <section class="arena" aria-label="対戦エリア">
+      <article class="team" id="team1">
+        <h2>① Team OpenAI</h2>
+        <p>Copilot / ChatGPT / Codex</p>
+        <div class="score" id="score1" aria-live="polite">90</div>
+        <div class="meter"><span id="hp1" style="width: 75%"></span></div>
+        <button type="button" onclick="boost(1)">応援🔥</button>
+      </article>
+
+      <div class="vs">VS</div>
+
+      <article class="team" id="team4">
+        <h2>④ Team Claude</h2>
+        <p>Claude / Base44 / Copilot</p>
+        <div class="score" id="score4" aria-live="polite">90</div>
+        <div class="meter"><span id="hp4" style="width: 75%"></span></div>
+        <button type="button" onclick="boost(4)">応援🔥</button>
+      </article>
+    </section>
+
+    <section class="log" aria-label="AI思考ログ">
+      <h3>🧠 AI思考ログ</h3>
+      <div id="logBox"></div>
+    </section>
+
+    <section class="controls">
+      <button type="button" onclick="startBattle()">▶ バトル開始</button>
+      <button type="button" onclick="resetBattle()">↺ リセット</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI Battle System v3</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
